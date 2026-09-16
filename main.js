@@ -10,6 +10,7 @@ let categoria_participante = 0
 
 let resultado
 
+
 // Verificando a idade do usuario para poder permitir a entrada dele na maratona e se tem atestado medico
 if (idade < 16) {
     alert("Você não pode participar da maratona")
@@ -54,15 +55,17 @@ if (categoria >= 7) {
     console.log("Categoria Elite")
 }
 
+// verificar se todos as etapas foram cumpridas
 if (etapa1 !== true || etapa2 !== true || etapa3 !== true) {
    resultado = false
 } else if (etapa1 === true && etapa2 === true && etapa3 === true) {
     resultado = true
 }
 
-else if (resultado == true) {
+if (resultado == true) {
     alert("Você esta inscrito na maratona")
 }
 
+// relatorio para ver se ta tudo certo
 console.log(`Idade ${idade} ${etapa1} \ Atestado ${atestado} ${etapa2} \ Distancia ${distancia} \ Tempo ${pace} \ Categoria ${categoria_participante} \ Resultado ${resultado}`)
 
